@@ -31,6 +31,7 @@ public class DoorController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Destroy(gameObject);
             if (operatorNum == 0)
             {
                 scoreController.score += number;
@@ -38,7 +39,7 @@ public class DoorController : MonoBehaviour
             }
             else if (operatorNum == 1)
             {
-                if (scoreController.score<=number)
+                if (scoreController.score <= number)
                 {
                     scoreController.score = 1;
                     scoreController.ScoreUpdate();
@@ -57,7 +58,7 @@ public class DoorController : MonoBehaviour
             else if (operatorNum == 3)
             {
                 scoreController.score /= number;
-                if (scoreController.score<=0)
+                if (scoreController.score <= 0)
                 {
                     scoreController.score = 1;
                     scoreController.ScoreUpdate();

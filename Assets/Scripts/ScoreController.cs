@@ -7,6 +7,8 @@ public class ScoreController : MonoBehaviour
 {
     public int score;
     [SerializeField] TextMeshProUGUI scoreText;
+
+
     void Start()
     {
         score = 100;

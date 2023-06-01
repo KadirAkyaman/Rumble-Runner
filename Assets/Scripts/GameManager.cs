@@ -14,8 +14,13 @@ namespace PathCreation.Examples
 
         //Rotation
         Quaternion startRotation;
+
+        [SerializeField] GameObject playerCanvas;
+
+        public bool isFinish;
         void Start()
         {
+            isFinish = false;
             pathFollower = GameObject.Find("PlayerPath").GetComponent<PathFollower>();
             pathFollower.enabled = false;
 
@@ -26,6 +31,15 @@ namespace PathCreation.Examples
         void Update()
         {
             PathFollower();
+
+            if (isFinish)
+            {
+                playerCanvas.SetActive(false);
+            }
+            else
+            {
+                playerCanvas.SetActive(true);
+            }
         }
 
         void PathFollower()
@@ -38,7 +52,7 @@ namespace PathCreation.Examples
 
         IEnumerator RotatePlayer()
         {
-            
+
             yield return new WaitForSeconds(0.5f);
             playerAnimator.SetBool("isStart", true);
             pathFollower.enabled = true;
