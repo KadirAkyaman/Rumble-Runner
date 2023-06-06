@@ -1,5 +1,5 @@
 # Rumble-Runner
 
 
-https://github.com/KadirAkyaman/Rumble-Runner/assets/101833015/980a5cda-30c0-4e24-aeb3-402414a73d10
+https://github.com/KadirAkyaman/Rumble-Runner/assets/101833015/0d132c57-af1d-4f18-816b-2bb61e336c4a
 
